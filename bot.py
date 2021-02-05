@@ -20,9 +20,8 @@ async def on_message(message):
 
     if message.author.bot:
         return
-    elif message.author.id == 389104618099048468 and match or message.attachments: 
-        await message.add_reaction(emoji)
+    elif message.author.id == 389104618099048468:
+        if match or message.attachments:
+            await message.add_reaction(emoji)
 
 client.run(os.getenv('TOKEN'))
-
-
